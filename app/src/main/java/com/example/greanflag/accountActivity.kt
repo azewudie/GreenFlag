@@ -47,8 +47,7 @@ class accountActivity : baseActivity() {
             v.background = resources.getDrawable(R.drawable.input_focus_border)
             if (!hasFocus) {
                 inp_email?.error = validEmail();
-                var tx:String= "Invalid Email Address"
-                if(inp_email?.length()==0 ||inp_email?.text.toString() ==tx){
+                if(inp_email?.length()==0 ||inp_email?.text.toString() == "Invalid Email Address"){
                     inp_email?.background = resources.getDrawable(R.drawable.input_blur_border)
                 }
 
