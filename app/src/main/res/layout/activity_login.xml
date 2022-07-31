@@ -39,10 +39,16 @@
             android:background="@color/white"
             android:gravity="center"
             android:hint="@string/enter_your_email"
+            app:helperText ="Required"
+            app:helperTextTextColor ="@color/helper_text_color"
+            app:errorEnabled="true"
+            app:helperTextEnabled="true"
+            android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColorHint="#757575"
             android:textStyle="italic"
+
             app:layout_constraintTop_toBottomOf="@id/tv_email"
             tools:layout_editor_absoluteX="20dp" />
 
@@ -68,10 +74,15 @@
             android:background="@color/white"
             android:gravity="center"
             android:hint="@string/enter_your_password"
+            android:inputType="textPassword"
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColorHint="#757575"
             android:textStyle="italic"
+            app:errorEnabled="true"
+            app:helperText="Required"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/helper_text_color"
             app:layout_constraintTop_toBottomOf="@id/tv_create_password"
             tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck"
             tools:layout_editor_absoluteX="20dp" />

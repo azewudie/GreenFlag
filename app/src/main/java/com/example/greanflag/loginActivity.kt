@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
+import android.util.Patterns
+import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.TextView
@@ -37,6 +39,32 @@ class loginActivity : baseActivity() {
         loginbtn?.setOnClickListener {
             loginRegisteredUser()
         }
+        inp_email?.setOnFocusChangeListener(View.OnFocusChangeListener { v, hasFocus ->
+            v.background = resources.getDrawable(R.drawable.input_focus_border)
+            if (!hasFocus) {
+                inp_email?.error = validEmail();
+                var tx:String= "Invalid Email Address"
+                if(inp_email?.length()==0 ||inp_email?.text.toString() ==tx){
+                    inp_email?.background = resources.getDrawable(R.drawable.input_blur_border)
+                }
+            }
+        })
+        inp_password?.setOnFocusChangeListener(View.OnFocusChangeListener { v, hasFocus ->
+            v.background = resources.getDrawable(R.drawable.input_focus_border)
+            if (!hasFocus) {
+                inp_password?.error = validPassword();
+                var tx:String= "Minimum 8 Character password"
+                if(inp_password?.length() ==0 || inp_password?.text.toString() == tx ||
+                    inp_password?.text.toString() == "Must Contain one Upper-case Character"  ||
+                    inp_password?.text.toString() == "Must Contain one Lower-case Character" ||
+                    inp_password?.text.toString()=="Must Contain one special Character(@#\$%^&+=)"){
+                    inp_password?.background = resources.getDrawable(R.drawable.input_blur_border)
+                }
+
+
+
+            }
+        })
     }
 
     private fun loginRegisteredUser() {
@@ -63,6 +91,37 @@ class loginActivity : baseActivity() {
 
 
         }
+
+    }
+
+    private fun  validEmail():String?{
+        val emailText = inp_email?.text.toString()
+        if(!Patterns.EMAIL_ADDRESS.matcher(emailText).matches()){
+            return "Invalid Email Address"
+        }
+        return null
+
+
+    }
+    private fun  validPassword():String?{
+        val passwordText = inp_password?.text.toString()
+        if(passwordText.length <8){
+
+            return "Minimum 8 Character password"
+        }
+        if(!passwordText.matches(".*[A-Z].*".toRegex())){
+
+            return "Must Contain one Upper-case Character"
+        }
+        if(!passwordText.matches(".*[a-z].*".toRegex())){
+
+            return "Must Contain one Lower-case Character"
+        }
+        if(!passwordText.matches(".*[@#\$%^&+=].*".toRegex())){
+
+            return "Must Contain one special Character(@#\$%^&+=)"
+        }
+        return null
 
     }
     private fun validateForm(

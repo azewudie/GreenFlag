@@ -13,5 +13,8 @@
     <color name="colorAccent">#0C90F1</color>
     <color name ="primary_text_color">#363A43</color>
     <color name ="secondary_text_color">#7A8089</color>
+    <color name="focus_green">#028140</color>
+    <color name ="blur_pink">#C21E56</color>
+    <color name="helper_text_color">#FFF300</color>
 
 </resources>
