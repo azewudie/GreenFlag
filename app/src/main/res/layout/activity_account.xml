@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".accountActivity"
+    android:background="@color/black">
+
+
+    <include
+        android:id="@+id/layout"
+        layout="@layout/toolbar"/>
+
+    <View
+        android:id="@+id/divder"
+        style="@style/Divider"
+        app:layout_constraintTop_toBottomOf="@id/layout"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="@string/email_address"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/museosanslarge"
+        app:layout_constraintTop_toBottomOf="@id/divder"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:hint="@string/enter_your_email"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/tv_email"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/tv_create_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_password"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/museosanslarge"
+        app:layout_constraintTop_toBottomOf="@id/input_email"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:hint="@string/enter_your_password"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/tv_create_password"
+        tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/tv_repeat_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/R_password"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/museosanslarge"
+        app:layout_constraintTop_toBottomOf="@id/input_password"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input__repeat_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:hint="@string/repeat_password"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/tv_repeat_password"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="330dp"
+        android:layout_height="76dp"
+        android:layout_margin="25sp"
+        android:layout_marginStart="10sp"
+        android:fontFamily="@font/museosanssmall"
+        android:paddingStart="10sp"
+        android:text="@string/your_password_should_have_a_minimum_of_8_characters_and_contain_at_least_one_number_one_uppercase_and_one_lower_case_letter_you_can_use_special_characters"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input__repeat_password" />
+
+    <TextView
+        android:id="@+id/tv_create_login"
+        android:layout_width="275dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="4sp"
+        android:layout_marginEnd="16sp"
+        android:background="@drawable/gradient_button_background"
+        android:fontFamily="@font/museosanslarge"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info"
+        app:layout_constraintVertical_bias="0.395"
+        tools:ignore="TextContrastCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

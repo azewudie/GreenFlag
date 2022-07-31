@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".loginActivity"
+        android:background="@color/black">
+
+
+        <include
+            android:id="@+id/layout"
+            layout="@layout/loginheader"/>
+
+        <View
+            android:id="@+id/divder"
+            style="@style/Divider"
+            app:layout_constraintTop_toBottomOf="@id/layout"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:text="@string/email_address"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/museosanslarge"
+            app:layout_constraintTop_toBottomOf="@id/divder"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_email_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="@string/enter_your_email"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#757575"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <TextView
+            android:id="@+id/tv_create_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_password"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/museosanslarge"
+            app:layout_constraintTop_toBottomOf="@id/input_email_login"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_password_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="@string/enter_your_password"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#757575"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/tv_create_password"
+            tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck"
+            tools:layout_editor_absoluteX="20dp" />
+
+
+
+        <TextView
+            android:id="@+id/tv_info"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="334dp"
+            android:layout_height="70dp"
+            android:layout_margin="25sp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/museosanssmall"
+            android:gravity="center"
+            android:paddingStart="10sp"
+            android:text="@string/forgot_password"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.623"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_password_login" />
+
+        <TextView
+            android:id="@+id/tv_btn_login"
+            android:layout_width="275dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="4sp"
+            android:layout_marginEnd="16sp"
+            android:background="@drawable/gradient_button_background"
+            android:fontFamily="@font/museosanslarge"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.566"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_info"
+            app:layout_constraintVertical_bias="0.395"
+            tools:ignore="TextContrastCheck" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

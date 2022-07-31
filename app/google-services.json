@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "777808048759",
+    "project_id": "greenflag-4665e",
+    "storage_bucket": "greenflag-4665e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777808048759:android:efe36e41c2621aff548c72",
+        "android_client_info": {
+          "package_name": "com.example.greanflag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777808048759-a57lbqmgsjktfmj5pqg4q869q9o3qqbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTNKmR6kMGSb_Ywpzlp0CLmmQHc-Iu-8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777808048759-a57lbqmgsjktfmj5pqg4q869q9o3qqbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
